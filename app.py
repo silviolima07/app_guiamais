@@ -46,6 +46,8 @@ def do_scrap(cidade):
     df_guiamais.drop_duplicates(inplace=True)
     st.subheader("Total: "+str(df_guiamais.shape[0])+ ' observações unicas')
     st.table(df_guiamais)
+    
+    
 
 def main():
 
@@ -74,7 +76,11 @@ def main():
 
     #header_list = ["Cargo", "Empresa"]
 
-    # Definir a data da última atualização
+    msg = 'Sem informacao'
+    pagina_inicial= 1
+    pagina_final = 10
+    lista_empresa = []
+    lista_endereco = []
 
 
 
@@ -90,11 +96,11 @@ def main():
         subcategoria = 'restaurante'
         #lista_cidades = ['salvador-ba'] # 'sao-paulo-sp', 'salvador-ba', 'rio-de-janeiro-rj', 'belo-horizonte-mg']
         cidade = 'sao-paulo-sp'
-        msg = 'Sem informacao'
-        pagina_inicial= 1
-        pagina_final = 10
-        lista_empresa = []
-        lista_endereco = []
+        #msg = 'Sem informacao'
+        #pagina_inicial= 1
+        #pagina_final = 10
+        #lista_empresa = []
+        #lista_endereco = []
         st.subheader(cidade.upper())
         st.subheader("INICIAR")
         if st.button("  SCRAP  "):
