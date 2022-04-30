@@ -8,6 +8,8 @@ verify_ssl = true
 [packages]
 bokeh = "*"
 lxml = "*"
+geopy = "*"
+folium = "*"
 
 [requires]
 python_version = "3.6"
