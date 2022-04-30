@@ -92,7 +92,17 @@ def main():
 
 
     if choice == activities[0]:
-        st.write("Teste")
+        cidade = st.selectbox(
+     'Escolha uma cidade',
+     ('Sao Paulo', 'Rio de Janeiro'))
+        st.subheader(cidade.upper())
+        st.subheader("INICIAR")
+        if st.button("  SCRAP  "):
+            if cidade == 'Sao Paulo':
+                cidade = 'sao-paulo-sp'
+            if cidade == 'Rio de Janeiro':
+                cidade = 'rio-de-janeiro-rj'            
+            do_scrap(cidade)
        
         
         
@@ -108,7 +118,7 @@ def main():
         #cidade = st.text_input('Informe uma cidade', help="formato cidade-uf")
         cidade = st.selectbox(
      'Escolha uma cidade',
-     (df_cidades['cidade-uf']).upper())
+     df_cidades['cidade-uf'])
 
         #cidade = 'sao-paulo-sp'
         st.subheader(cidade.upper())
