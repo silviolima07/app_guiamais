@@ -64,16 +64,16 @@ def main():
 
 
     # Titulo do web app
-    html_page = """
-    <div style="background-color:blue;padding=30px">
-        <p style='text-align:center;font-size:30px;font-weight:bold;color:white'>Indeed</p>
-    </div>
-              """
-    st.markdown(html_page, unsafe_allow_html=True)
+    #html_page = """
+    #<div style="background-color:blue;padding=30px">
+    #    <p style='text-align:center;font-size:30px;font-weight:bold;color:white'>Indeed</p>
+    #</div>
+    #          """
+    #st.markdown(html_page, unsafe_allow_html=True)
    
     html_page = """
     <div style="background-color:white;padding=20px">
-        <p style='text-align:center;font-size:20px;font-weight:bold;color:blue'>Scrap de Oportunidades Abertas em Data Science</p>
+        <p style='text-align:center;font-size:20px;font-weight:bold;color:red'>Web scrap de estabelecimentos comerciais em cidades do Brasil</p>
     </div>
               """
     st.markdown(html_page, unsafe_allow_html=True)
@@ -92,7 +92,6 @@ def main():
 
 
     if choice == activities[0]:
-        st.title("## Web scrap de estabelecimentos comerciais em cidades do Brasil")
         st.markdown("##Objetivo:")
         st.markdown("## - descobrir o endereço")
         
