@@ -140,6 +140,8 @@ def main():
                 
                             
             df = do_scrap(cidade)
+            st.write("Apos scrap")
+            st.table(df)
             file = "scrap.csv"
             st.markdown(get_table_download_link(df, file), unsafe_allow_html=True)
             
