@@ -55,7 +55,8 @@ def crawler_guiamais(url_page, page, lista_empresa, lista_endereco):
         #
 
         return df_guiamais
-	except:
+        
+    except:
         return False
 	
 	
