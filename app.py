@@ -105,12 +105,11 @@ def main():
             do_scrap(cidade)
             
     elif choice == activities[2]:
-        cidade = st.text_input('Informe uma cidade', help="formato cidade-uf")
+        #cidade = st.text_input('Informe uma cidade', help="formato cidade-uf")
         cidade = st.selectbox(
      'Escolha uma cidade',
-     df_cidades['cidade-uf'])
+     df_cidades['cidade-uf'].upper())
 
-        st.write('Cidade', cidade)
         #cidade = 'sao-paulo-sp'
         st.subheader(cidade.upper())
         st.subheader("INICIAR")
