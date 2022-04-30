@@ -79,7 +79,7 @@ def main():
         pagina_final = 6
         lista_empresa = []
         lista_endereco = []
-        parte_cidade, parte_uf = cidade.split('-')
+        
         if st.button("Iniciar scrap de "+parte_cidade.upper()):
             for page in range(pagina_inicial, pagina_final):
                 page = str(pagina_inicial)
