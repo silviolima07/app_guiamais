@@ -63,22 +63,9 @@ def main():
 
 
     if choice == activities[0]:
+        st.write("Teste")
        
-        col1, col2 = st.columns(2)
-    
-        col11, col22 = st.columns(2)
         
-        col1.header("Cientista de Dados")
-        col1.image(aguia1, width=300)
-        
-        col2.header("Analista de Dados")
-        col2.image(aguia2, width=300)
-
-        col11.header("Engenheiro de M.Learning")
-        col11.image(aguia3, width=300)
-
-        col22.header("Engenheiro de Dados")
-        col22.image(aguia4, width=300)
         
     elif choice == activities[1]:
     
@@ -105,32 +92,6 @@ def main():
             st.table(df_guiamais)
 
         
-    elif choice == activities[2]:
-        st.sidebar.image(aguia2,caption="", width=300)
-        df = pd.read_csv(file_csv[1])
-        total = str(len(df))
-        st.title(activities[2])
-        st.subheader("Total de vagas: "+total)
-        st.table(df)
-    
-   
-    elif choice == activities[3]:
-        st.sidebar.image(aguia3,caption="", width=300)
-        df = pd.read_csv(file_csv[2])
-        total = str(len(df))
-        st.title(activities[3])
-        st.subheader("Total de vagas: "+total)
-        st.table(df)
-
-
-    elif choice == activities[4]:
-        st.sidebar.image(aguia4,caption="", width=300)
-        df = pd.read_csv(file_csv[3])
-        total = str(len(df))
-        st.title(activities[4])
-        st.subheader("Total de vagas: "+total)
-        st.table(df)
-            
             
 
   
