@@ -91,10 +91,13 @@ def main():
             df_guiamais.to_csv(file, index=False)
             st.table(df_guiamais)
 
-        st.subheader("Antes: "+df_guiamais.shape)
-        st.write("Remover duplicados")
+        st.subheader("Antes")
+        st.write(df_guiamais.shape)
+        st.subheader("Remover duplicados")
+        st.write(".......")
         df_guiamais.drop_duplicates(inplace=True)
-        st.subheader("Depois: "+df_guiamais.shape)
+        st.subheader("Depois")
+        st.write(df_guiamais.shape)
             
 
   
