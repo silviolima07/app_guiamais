@@ -67,7 +67,7 @@ def do_scrap(cidade):
     df_guiamais.drop_duplicates(inplace=True)
     st.subheader("Total: "+str(df_guiamais.shape[0])+ ' observações unicas')
     st.table(df_guiamais)
-    st.markdown(get_table_download_link(df_guiamais, file), unsafe_allow_html=True)
+    return df_guiamais
     
     
 
@@ -139,7 +139,9 @@ def main():
                 cidade = 'porto-alegre-rs'                
                 
                             
-            do_scrap(cidade)
+            df = do_scrap(cidade)
+            file = "scrap.csv"
+            st.markdown(get_table_download_link(df, file), unsafe_allow_html=True)
             
     elif choice == activities[2]:
         #cidade = st.text_input('Informe uma cidade', help="formato cidade-uf")
