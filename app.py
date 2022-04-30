@@ -31,6 +31,22 @@ def make_clickable(link):
     return f'<a target="_blank" href="{link}">Link da vaga</a>' # ou {text} e irá mostrar o link clicável
     
 
+def do_scrap(cidade):
+    for page in range(pagina_inicial, pagina_final):
+                page = str(pagina_inicial)
+                url_page = url_guia+cidade+'/'+categoria+'/'+subcategoria+'?page='+page
+                df_guiamais= crawler_guiamais(url_page, page, lista_empresa, lista_endereco)
+
+    print("Salvar dataset gerado")
+    size = str(df_guiamais.shape[0])
+    file = 'df_'+cidade+'_'+size+'_'+categoria+'.csv'
+    df_guiamais.to_csv(file, index=False)
+            
+
+    df_guiamais.drop_duplicates(inplace=True)
+    st.subheader("Total: "+str(df_guiamais.shape[0])+ ' observações unicas')
+    st.table(df_guiamais)
+
 def main():
 
 
@@ -51,7 +67,7 @@ def main():
 
    
 
-    activities = ["Home",'Restaurantes',"About"]
+    activities = ["Home",'Restaurantes','Teste',"About"]
     file_csv = ['CSV/indeed_Cientista_de_dados.csv','CSV/indeed_Analista_de_dados.csv', 'CSV/indeed_Engenheiro_de_Machine_Learning.csv',
                 'CSV/indeed_Engenheiro_de_Dados.csv']
     choice = st.sidebar.selectbox("Selecione uma opção",activities)
@@ -96,6 +112,9 @@ def main():
             df_guiamais.drop_duplicates(inplace=True)
             st.subheader("Total: "+str(df_guiamais.shape[0])+ ' observações unicas')
             st.table(df_guiamais)
+            
+            st.write("Teste da funcao do_scrap")
+            do_scrap(cidade)
             
 
   
