@@ -9,10 +9,11 @@ from geopy.geocoders import Nominatim
 from geopy.extra.rate_limiter import RateLimiter
 import folium
 
-def crawler_guiamais(url_page, lista_empresa, lista_endereco):
+def crawler_guiamais(url_page, page, lista_empresa, lista_endereco):
     
-    print("\ncrawler_guiamais")
-    print("\n\tURL:", url_page)
+    print("\nCrawler_guiamais")
+    print("Pagina:", page)
+    print("\nURL:", url_page)
     page = requests.get(url_page, allow_redirects=False)
     soup = BeautifulSoup(page.text, 'html.parser')
     #lista_empresa = []
