@@ -79,8 +79,8 @@ def main():
         pagina_final = 6
         lista_empresa = []
         lista_endereco = []
-        
-        if st.button("INICIAR -->" +cidade.upper()):
+        st.subheader(cidade.upper())
+        if st.button("INICIAR SCRAP"):
             for page in range(pagina_inicial, pagina_final):
                 page = str(pagina_inicial)
                 url_page = url_guia+cidade+'/'+categoria+'/'+subcategoria+'?page='+page
