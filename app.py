@@ -108,7 +108,7 @@ def main():
         #cidade = st.text_input('Informe uma cidade', help="formato cidade-uf")
         cidade = st.selectbox(
      'Escolha uma cidade',
-     df_cidades['cidade-uf'].upper())
+     (df_cidades['cidade-uf']).upper())
 
         #cidade = 'sao-paulo-sp'
         st.subheader(cidade.upper())
