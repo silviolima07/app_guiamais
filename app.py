@@ -98,6 +98,7 @@ def main():
         st.subheader(cidade.upper())
         st.subheader("INICIAR")
         if st.button("  SCRAP  "):
+            """
             for page in range(pagina_inicial, pagina_final):
                 page = str(pagina_inicial)
                 url_page = url_guia+cidade+'/'+categoria+'/'+subcategoria+'?page='+page
@@ -112,6 +113,7 @@ def main():
             df_guiamais.drop_duplicates(inplace=True)
             st.subheader("Total: "+str(df_guiamais.shape[0])+ ' observações unicas')
             st.table(df_guiamais)
+            """
             
             st.write("Teste da funcao do_scrap")
             do_scrap(cidade)
