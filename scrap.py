@@ -9,7 +9,7 @@ from geopy.geocoders import Nominatim
 from geopy.extra.rate_limiter import RateLimiter
 import folium
 
-def crawler_guiamais(url_page):
+def crawler_guiamais(url_page, lista_empresa, lista_endereco):
     
     print("\ncrawler_guiamais")
     print("\n\tURL:", url_page)
