@@ -86,6 +86,8 @@ def main():
     choice = st.sidebar.selectbox("Selecione uma opção",activities)
 
     #header_list = ["Cargo", "Empresa"]
+    
+    df_cidades = pd.read_csv("df_cidades-uf.csv)
 
 
 
@@ -104,6 +106,10 @@ def main():
             
     elif choice == activities[2]:
         cidade = st.text_input('Informe uma cidade', help="formato cidade-uf")
+        cidade = st.selectbox(
+     'Escolha uma cidade',
+     df_cidades.cidade-uf)
+
         st.write('Cidade', cidade)
         #cidade = 'sao-paulo-sp'
         st.subheader(cidade.upper())
