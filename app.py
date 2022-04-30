@@ -79,7 +79,7 @@ def main():
         pagina_final = 6
         lista_empresa = []
         lista_endereco = []
-        if st.button("Iniciar scrap"):
+        if st.button("Iniciar scrap de "+cidade):
             for page in range(pagina_inicial, pagina_final):
                 page = str(pagina_inicial)
                 url_page = url_guia+cidade+'/'+categoria+'/'+subcategoria+'?page='+page
@@ -92,8 +92,7 @@ def main():
             
 
             df_guiamais.drop_duplicates(inplace=True)
-            st.subheader("Total:"+str(df_guiamais.shape[0]))
-            st.subheader(df_guiamais.shape[0])
+            st.subheader("Total: "+str(df_guiamais.shape[0])+ ' observações')
             st.table(df_guiamais)
             
 
