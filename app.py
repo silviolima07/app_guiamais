@@ -91,10 +91,10 @@ def main():
             df_guiamais.to_csv(file, index=False)
             
 
-        df_guiamais.drop_duplicates(inplace=True)
-        st.subheader("Shape")
-        st.markdown(df_guiamais.shape)
-        st.table(df_guiamais)
+            df_guiamais.drop_duplicates(inplace=True)
+            st.subheader("Shape")
+            st.markdown(df_guiamais.shape)
+            st.table(df_guiamais)
             
 
   
