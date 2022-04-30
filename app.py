@@ -80,8 +80,8 @@ def main():
         lista_empresa = []
         lista_endereco = []
         if st.button("Iniciar scrap"):
-            page = str(pagina_inicial)
             for page in range(pagina_inicial, pagina_final):
+                page = str(pagina_inicial)
                 url_page = url_guia+cidade+'/'+categoria+'/'+subcategoria+'?page='+page
                 df_guiamais= crawler_guiamais(url_page)
 
