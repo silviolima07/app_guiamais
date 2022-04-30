@@ -80,7 +80,7 @@ def main():
         lista_empresa = []
         lista_endereco = []
         st.subheader(cidade.upper())
-        st.markdown("## INICIAR")
+        st.markdown("# INICIAR")
         if st.button("SCRAP"):
             for page in range(pagina_inicial, pagina_final):
                 page = str(pagina_inicial)
