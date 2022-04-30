@@ -76,7 +76,7 @@ def main():
         cidade = 'sao-paulo-sp'
         msg = 'Sem informacao'
         pagina_inicial= 1
-        pagina_final = 6
+        pagina_final = 10
         lista_empresa = []
         lista_endereco = []
         st.subheader(cidade.upper())
@@ -93,7 +93,7 @@ def main():
             
 
             df_guiamais.drop_duplicates(inplace=True)
-            st.subheader("Total: "+str(df_guiamais.shape[0])+ ' observações')
+            st.subheader("Total: "+str(df_guiamais.shape[0])+ ' observações unicas')
             st.table(df_guiamais)
             
 
