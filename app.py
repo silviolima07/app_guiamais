@@ -33,6 +33,9 @@ def make_clickable(link):
 
 def do_scrap(cidade):
     msg = 'Sem informacao'
+    url_guia = 'https://www.guiamais.com.br/'
+    categoria = 'restaurantes'
+    subcategoria = 'restaurante'
     pagina_inicial= 1
     pagina_final = 10
     lista_empresa = []
@@ -92,9 +95,9 @@ def main():
         
     elif choice == activities[1]:
     
-        url_guia = 'https://www.guiamais.com.br/'
-        categoria = 'restaurantes'
-        subcategoria = 'restaurante'
+        #url_guia = 'https://www.guiamais.com.br/'
+        #categoria = 'restaurantes'
+        #subcategoria = 'restaurante'
         #lista_cidades = ['salvador-ba'] # 'sao-paulo-sp', 'salvador-ba', 'rio-de-janeiro-rj', 'belo-horizonte-mg']
         cidade = 'sao-paulo-sp'
         #msg = 'Sem informacao'
