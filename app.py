@@ -30,6 +30,16 @@ def make_clickable(link):
     text = link
     return f'<a target="_blank" href="{link}">Link da vaga</a>' # ou {text} e irá mostrar o link clicável
     
+def get_table_download_link(df,file):
+    """Generates a link allowing the data in a given panda dataframe to be downloaded
+    in:  dataframe
+    out: href string
+    """
+    csv = df.to_csv(index=False)
+    b64 = base64.b64encode(csv.encode()).decode()  # some strings <-> bytes conversions necessary here
+    href = f'<a href="data:file/csv;base64,{b64}" download= "{file}" >Download csv</a>'
+    return     
+    
 
 def do_scrap(cidade):
     msg = 'Sem informacao'
@@ -57,6 +67,7 @@ def do_scrap(cidade):
     df_guiamais.drop_duplicates(inplace=True)
     st.subheader("Total: "+str(df_guiamais.shape[0])+ ' observações unicas')
     st.table(df_guiamais)
+    st.markdown(get_table_download_link(df_guiamais, file), unsafe_allow_html=True)
     
     
 
