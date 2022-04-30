@@ -92,7 +92,7 @@ def main():
             
 
             df_guiamais.drop_duplicates(inplace=True)
-            st.subheader("Total:")
+            st.subheader("Total:"+str(df_guiamais.shape[0]))
             st.subheader(df_guiamais.shape[0])
             st.table(df_guiamais)
             
