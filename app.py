@@ -61,11 +61,6 @@ def main():
     # Definir a data da última atualização
 
 
-    f = open("update", "r")
-    data_update = f.read()
-   
-    if choice != 'About':
-        st.write('Última atualizacao: '+ data_update)
 
     if choice == activities[0]:
        
