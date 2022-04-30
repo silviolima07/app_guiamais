@@ -99,8 +99,6 @@ def main():
         st.subheader(cidade.upper())
         st.subheader("INICIAR")
         if st.button("  SCRAP  "):
-            
-            st.write("Teste da funcao do_scrap")
             do_scrap(cidade)
             
     elif choice == activities[2]:
@@ -112,7 +110,7 @@ def main():
         if st.button("  SCRAP  "):
             
             st.write("Scrap da cidade")
-            #do_scrap(cidade)
+            do_scrap(cidade)
   
     elif choice == 'About':
         #st.sidebar.image(about,caption="", width=300, height= 200)
