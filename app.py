@@ -32,6 +32,13 @@ def make_clickable(link):
     
 
 def do_scrap(cidade):
+    msg = 'Sem informacao'
+    pagina_inicial= 1
+    pagina_final = 10
+    lista_empresa = []
+    lista_endereco = []
+
+
     for page in range(pagina_inicial, pagina_final):
                 page = str(pagina_inicial)
                 url_page = url_guia+cidade+'/'+categoria+'/'+subcategoria+'?page='+page
@@ -75,12 +82,6 @@ def main():
     choice = st.sidebar.selectbox("Selecione uma opção",activities)
 
     #header_list = ["Cargo", "Empresa"]
-
-    msg = 'Sem informacao'
-    pagina_inicial= 1
-    pagina_final = 10
-    lista_empresa = []
-    lista_endereco = []
 
 
 
