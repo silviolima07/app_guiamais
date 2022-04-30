@@ -95,40 +95,24 @@ def main():
         
     elif choice == activities[1]:
     
-        #url_guia = 'https://www.guiamais.com.br/'
-        #categoria = 'restaurantes'
-        #subcategoria = 'restaurante'
-        #lista_cidades = ['salvador-ba'] # 'sao-paulo-sp', 'salvador-ba', 'rio-de-janeiro-rj', 'belo-horizonte-mg']
         cidade = 'sao-paulo-sp'
-        #msg = 'Sem informacao'
-        #pagina_inicial= 1
-        #pagina_final = 10
-        #lista_empresa = []
-        #lista_endereco = []
         st.subheader(cidade.upper())
         st.subheader("INICIAR")
         if st.button("  SCRAP  "):
-            """
-            for page in range(pagina_inicial, pagina_final):
-                page = str(pagina_inicial)
-                url_page = url_guia+cidade+'/'+categoria+'/'+subcategoria+'?page='+page
-                df_guiamais= crawler_guiamais(url_page, page, lista_empresa, lista_endereco)
-
-            print("Salvar dataset gerado")
-            size = str(df_guiamais.shape[0])
-            file = 'df_'+cidade+'_'+size+'_'+categoria+'.csv'
-            df_guiamais.to_csv(file, index=False)
-            
-
-            df_guiamais.drop_duplicates(inplace=True)
-            st.subheader("Total: "+str(df_guiamais.shape[0])+ ' observações unicas')
-            st.table(df_guiamais)
-            """
             
             st.write("Teste da funcao do_scrap")
             do_scrap(cidade)
             
-
+    elif choice == activities[2]:
+        cidade = st.text_input('Informe uma cidade', help="formato cidade-uf")
+        st.write('Cidade', cidade)
+        #cidade = 'sao-paulo-sp'
+        st.subheader(cidade.upper())
+        st.subheader("INICIAR")
+        if st.button("  SCRAP  "):
+            
+            st.write("Scrap da cidade")
+            #do_scrap(cidade)
   
     elif choice == 'About':
         #st.sidebar.image(about,caption="", width=300, height= 200)
