@@ -89,15 +89,12 @@ def main():
             size = str(df_guiamais.shape[0])
             file = 'df_'+cidade+'_'+size+'_'+categoria+'.csv'
             df_guiamais.to_csv(file, index=False)
-            st.table(df_guiamais)
+            
 
-        st.subheader("Antes")
-        st.write(df_guiamais.shape)
-        st.subheader("Remover duplicados")
-        st.write(".......")
         df_guiamais.drop_duplicates(inplace=True)
-        st.subheader("Depois")
-        st.write(df_guiamais.shape)
+        st.subheader("Shape")
+        st.markdown(df_guiamais.shape)
+        st.table(df_guiamais)
             
 
   
