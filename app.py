@@ -45,7 +45,11 @@ def do_scrap(cidade):
     for page in range(pagina_inicial, pagina_final):
                 page = str(pagina_inicial)
                 url_page = url_guia+cidade+'/'+categoria+'/'+subcategoria+'?page='+page
+                
                 df_guiamais= crawler_guiamais(url_page, page, lista_empresa, lista_endereco)
+                if df_guiamais == 'False':
+                    st.subheader("Erro")
+                    break
 
     print("Salvar dataset gerado")
     size = str(df_guiamais.shape[0])
