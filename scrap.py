@@ -51,7 +51,6 @@ def crawler_guiamais(url_page, lista_empresa, lista_endereco):
     df_guiamais.drop_duplicates(inplace=True)
     print("Depois: ",df_guiamais.shape)
     #
-    df_guiamais['categoria'] = categoria
 
     return df_guiamais
 	
