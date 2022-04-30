@@ -87,7 +87,7 @@ def main():
 
     #header_list = ["Cargo", "Empresa"]
     
-    df_cidades = pd.read_csv("df_cidades-uf.csv)
+    df_cidades = pd.read_csv("df_cidades-uf.csv")
 
 
 
