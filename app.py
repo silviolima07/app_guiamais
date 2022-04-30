@@ -80,7 +80,7 @@ def main():
 
    
 
-    activities = ["Home",'Restaurantes','Teste',"About"]
+    activities = ["Home",'Capitais','Cidades',"About"]
     file_csv = ['CSV/indeed_Cientista_de_dados.csv','CSV/indeed_Analista_de_dados.csv', 'CSV/indeed_Engenheiro_de_Machine_Learning.csv',
                 'CSV/indeed_Engenheiro_de_Dados.csv']
     choice = st.sidebar.selectbox("Selecione uma opção",activities)
@@ -92,26 +92,43 @@ def main():
 
 
     if choice == activities[0]:
+        st.title("## Web scrap de estabelecimentos comerciais em cidades do Brasil")
+        st.markdown("##Objetivo:")
+        st.markdown("## - descobrir o endereço")
+        
+       
+        
+        
+    elif choice == activities[1]:
+    
         cidade = st.selectbox(
-     'Escolha uma cidade',
-     ('Sao Paulo', 'Rio de Janeiro'))
+     'Escolha uma capital',
+     ('Sao Paulo', 'Rio de Janeiro', 'Belo Horizonte', 'Fortaleza', 'Natal', 'Vitoria', 'Cuiaba', 'Curitiba', 'Salvador', 'Porto Alegre' ))
         st.subheader(cidade.upper())
         st.subheader("INICIAR")
         if st.button("  SCRAP  "):
             if cidade == 'Sao Paulo':
                 cidade = 'sao-paulo-sp'
             if cidade == 'Rio de Janeiro':
-                cidade = 'rio-de-janeiro-rj'            
-            do_scrap(cidade)
-       
-        
-        
-    elif choice == activities[1]:
-    
-        cidade = 'sao-paulo-sp'
-        st.subheader(cidade.upper())
-        st.subheader("INICIAR")
-        if st.button("  SCRAP  "):
+                cidade = 'rio-de-janeiro-rj'
+            if cidade == 'Belo Horizonte':
+                cidade = 'belo-horizonte-mg'
+            if cidade == 'Fortaleza':
+                cidade = 'fortaleza-ce'
+            if cidade == 'Natal':
+                cidade = 'natal-rn'
+            if cidade == 'Vitoria':
+                cidade = 'vitoria-es'
+            if cidade == 'Cuiaba':
+                cidade = 'cuiaba-mt'
+            if cidade == 'Curitiba':
+                cidade = 'curitiba-pr'
+            if cidade == 'Salvador':
+                cidade = 'salvador-ba'
+            if cidade == 'Porto Alegre':
+                cidade = 'porto-alegre-rs'                
+                
+                            
             do_scrap(cidade)
             
     elif choice == activities[2]:
