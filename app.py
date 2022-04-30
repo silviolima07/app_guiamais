@@ -81,7 +81,7 @@ def main():
         lista_endereco = []
         st.subheader(cidade.upper())
         st.subheader("INICIAR")
-        if st.button("->  SCRAP  <-"):
+        if st.button("\  SCRAP  \"):
             for page in range(pagina_inicial, pagina_final):
                 page = str(pagina_inicial)
                 url_page = url_guia+cidade+'/'+categoria+'/'+subcategoria+'?page='+page
