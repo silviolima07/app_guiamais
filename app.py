@@ -72,8 +72,8 @@ def main():
     #st.markdown(html_page, unsafe_allow_html=True)
    
     html_page = """
-    <div style="background-color:white;padding=20px">
-        <p style='text-align:center;font-size:20px;font-weight:bold;color:red'>Web scrap de estabelecimentos comerciais em cidades do Brasil</p>
+    <div style="background-color:white;padding=40px">
+        <p style='text-align:center;font-size:40px;font-weight:bold;color:red'>Web scrap de estabelecimentos comerciais em cidades do Brasil</p>
     </div>
               """
     st.markdown(html_page, unsafe_allow_html=True)
@@ -92,8 +92,8 @@ def main():
 
 
     if choice == activities[0]:
-        st.markdown("##Objetivo:")
-        st.markdown("## - descobrir o endereço")
+        st.subheader("Objetivo:")
+        st.markdown("### - descobrir o endereço")
         
        
         
