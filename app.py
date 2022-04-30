@@ -38,7 +38,7 @@ def get_table_download_link(df,file):
     csv = df.to_csv(index=False)
     b64 = base64.b64encode(csv.encode()).decode()  # some strings <-> bytes conversions necessary here
     href = f'<a href="data:file/csv;base64,{b64}" download= "{file}" >Download csv</a>'
-    return     
+    return href    
     
 
 def do_scrap(cidade):
@@ -67,7 +67,8 @@ def do_scrap(cidade):
     df_guiamais.drop_duplicates(inplace=True)
     st.subheader("Total: "+str(df_guiamais.shape[0])+ ' observações unicas')
     st.table(df_guiamais)
-    return df_guiamais
+    st.markdown(get_table_download_link(df, file), unsafe_allow_html=True)
+    
     
     
 
@@ -140,10 +141,7 @@ def main():
                 
                             
             df = do_scrap(cidade)
-            st.write("Apos scrap")
-            st.table(df)
-            file = "scrap.csv"
-            st.markdown(get_table_download_link(df, file), unsafe_allow_html=True)
+         
             
     elif choice == activities[2]:
         #cidade = st.text_input('Informe uma cidade', help="formato cidade-uf")
