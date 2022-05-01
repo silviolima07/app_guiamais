@@ -89,6 +89,10 @@ def main():
     </div>
               """
     st.markdown(html_page, unsafe_allow_html=True)
+    
+    farmacia = Image.open("Images/farmacia.png")
+    pizzaria = Image.open("Images/pizza.png") 
+    restaurante = Image.open("Images/restaurantes.png")
 
    
 
@@ -104,8 +108,24 @@ def main():
 
 
     if choice == activities[0]:
-        st.subheader("Objetivo:")
-        st.markdown("### - descobrir o endereço de restaurantes na cidade")
+        st.subheader("Objetivos")
+        st.markdown("### - descobrir o endereço na cidade:")
+        st.markdown("### - farmacias e drogarias
+        st.markdown("### - pizzarias")
+        st.markdown("### - restaurantes")
+        
+        col1, col2, col3 = st.columns(3)
+    
+        
+        col1.header("Farmacias e drogarias")
+        col1.image(farmacia, width=300)
+        
+        col2.header("Pizzarias")
+        col2.image(pizzaria, width=300)
+
+
+        col3.header("Restaurantes")
+        col3.image(restaurante, width=300
         
        
         
