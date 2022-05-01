@@ -109,7 +109,7 @@ def main():
 
     if choice == activities[0]:
         st.subheader("Objetivos")
-        st.markdown("### - descobrir o endereço na cidade")
+        st.markdown("### - descobrir o endereço")
         #st.markdown("### - farmacias e drogarias")
         #st.markdown("### - pizzarias")
         #st.markdown("### - restaurantes")
@@ -130,7 +130,11 @@ def main():
         
         
     elif choice == activities[1]:
-    
+        cat = st.radio(
+     "Escolha uma categoria:",
+     ('Farmacia', 'Pizzaria', 'Restaurante'))
+        
+        categoria = cat.lower()
         cidade = st.selectbox(
      'Escolha uma capital',
      ('Sao Paulo', 'Rio de Janeiro', 'Belo Horizonte', 'Fortaleza', 'Natal', 'Vitoria', 'Cuiaba', 'Curitiba', 'Salvador', 'Porto Alegre' ))
@@ -164,6 +168,11 @@ def main():
             
     elif choice == activities[2]:
         #cidade = st.text_input('Informe uma cidade', help="formato cidade-uf")
+        cat = st.radio(
+     "Escolha uma categoria:",
+     ('Farmacia', 'Pizzaria', 'Restaurante'))
+        
+        categoria = cat.lower()
         cidade = st.selectbox(
      'Escolha uma cidade',
      df_cidades['cidade-uf'])
