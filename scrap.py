@@ -8,6 +8,7 @@ import string
 from geopy.geocoders import Nominatim
 from geopy.extra.rate_limiter import RateLimiter
 import folium
+import streamlit as st
 
 def crawler_guiamais(url_page, page, lista_empresa, lista_endereco):
     
@@ -29,6 +30,7 @@ def crawler_guiamais(url_page, page, lista_empresa, lista_endereco):
                 temp = elem_title.get_text(strip=True)
                 temp =  ' '.join(temp.split()).strip().replace('-','')
                 print("Nome:", temp)
+                st.write(temp)
                 lista_empresa.append(temp)
             except:
                 lista_empresa.append(msg)  
@@ -39,6 +41,7 @@ def crawler_guiamais(url_page, page, lista_empresa, lista_endereco):
                 temp = str(elem_span).replace('<span>','').replace('</span>','').replace('[','').replace(']','')
                 temp =  ' '.join(temp.split()).strip().replace('-','')
                 print('Address:',temp)
+                st.write(temp)
                 lista_endereco.append(temp)
             except:
                 lista_endereco.append(msg)
