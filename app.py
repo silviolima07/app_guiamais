@@ -183,7 +183,7 @@ def main():
         if st.button("  SCRAP  "):
             
             st.write("Scrap da cidade")
-            do_scrap(cidade)
+            do_scrap(cidade, categoria)
   
     elif choice == 'About':
         #st.sidebar.image(about,caption="", width=300, height= 200)
