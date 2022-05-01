@@ -52,7 +52,7 @@ def do_scrap(cidade, categoria):
     msg = 'Sem informacao'
     url_guia = 'https://www.guiamais.com.br/'
     pagina_inicial= 1
-    pagina_final = 50
+    pagina_final = 5
     lista_empresa = []
     lista_endereco = []
     
@@ -67,7 +67,7 @@ def do_scrap(cidade, categoria):
     
 
     for page in range(pagina_inicial, pagina_final):
-                page = str(pagina_inicial)
+                page = str(page)
                 url_page = url_categoria+page
                 
                 df_guiamais= crawler_guiamais(url_page, page, lista_empresa, lista_endereco)
