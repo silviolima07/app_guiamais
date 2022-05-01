@@ -63,8 +63,6 @@ def do_scrap(cidade, categoria):
     if categoria == 'restaurante':
         url_categoria = url_guia+'/'+cidade+'/restaurantes/restaurante'+'?page='
     
-    
-page
 
     for page in range(pagina_inicial, pagina_final):
                 page = str(pagina_inicial)
