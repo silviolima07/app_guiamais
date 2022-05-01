@@ -184,7 +184,7 @@ def main():
             if cidade == 'Maceió':
                 cidade = 'maceio-al'
             if cidade == 'Macapá':
-                cidade = 'macapa-ro'
+                cidade = 'macapa-ap'
             if cidade == 'Manaus':
                 cidade = 'manaus-am'
             if cidade == 'Brasilia':
@@ -218,7 +218,7 @@ def main():
             for i in range(11):
                 bar.progress(i * 10)
                 # wait
-                time.sleep(0.1)
+                time.sleep(0.05)
                 
             df = do_scrap(cidade,categoria)
             
