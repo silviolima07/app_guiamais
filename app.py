@@ -106,10 +106,10 @@ def main():
     pizzaria = Image.open("Images/pizza.png") 
     restaurante = Image.open("Images/restaurantes.png")
     
-    lista_capitais = ('Rio Branco','Maceió','Macapá','Manaus','Salvador','Fortaleza','Brasília',
+    lista_capitais = ['Rio Branco','Maceió','Macapá','Manaus','Salvador','Fortaleza','Brasília',
     'Vitória','Goiânia','São Luís','Cuiabá','Campo Grande','Belo Horizonte','Belém','João Pessoa',
     'Curitiba','Recife','Teresina','Rio de Janeiro','Natal','Porto Alegre','Porto Velho','Boa Vista',
-    'Florianópolis','São Paulo','Aracaju','Palmas')
+    'Florianópolis','São Paulo','Aracaju','Palmas']
 
 
    
@@ -153,7 +153,7 @@ def main():
         categoria = cat.lower()
         cidade = st.selectbox(
      'Escolha uma capital',
-     [lista_capitais])
+     lista_capitais)
         st.subheader(cidade.upper())
         st.subheader("INICIAR")
         if st.button("  SCRAP  "):
