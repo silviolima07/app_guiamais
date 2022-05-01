@@ -41,13 +41,13 @@ def get_table_download_link(df,file):
     return href    
     
 
-def do_scrap(cidade):
+def do_scrap(cidade, categoria):
     msg = 'Sem informacao'
     url_guia = 'https://www.guiamais.com.br/'
-    categoria = 'restaurantes'
-    subcategoria = 'restaurante'
+    categoria = categoria
+    subcategoria = categoria
     pagina_inicial= 1
-    pagina_final = 50
+    pagina_final = 10
     lista_empresa = []
     lista_endereco = []
 
