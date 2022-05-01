@@ -118,14 +118,14 @@ def main():
     
         
         #col1.header("Farmacias e drogarias")
-        col1.image(farmacia, width=100)
+        col1.image(farmacia, width=200)
         
         #col2.header("Pizzarias")
-        col2.image(pizzaria, width=100)
+        col2.image(pizzaria, width=250)
 
 
         #col3.header("Restaurantes")
-        col3.image(restaurante, width=100)
+        col3.image(restaurante, width=200)
         
        
         
