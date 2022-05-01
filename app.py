@@ -131,7 +131,7 @@ def main():
         
     elif choice == activities[1]:
         cat = st.radio(
-     "Escolha uma categoria:",
+     "ESCOLHA UMA CATEGORIA:",
      ('Farmacia', 'Pizzaria', 'Restaurante'))
         
         categoria = cat.lower()
@@ -169,7 +169,7 @@ def main():
     elif choice == activities[2]:
         #cidade = st.text_input('Informe uma cidade', help="formato cidade-uf")
         cat = st.radio(
-     "Escolha uma categoria:",
+     "ESCOLHA UMA CATEGORIA:",
      ('Farmacia', 'Pizzaria', 'Restaurante'))
         
         categoria = cat.lower()
