@@ -52,7 +52,7 @@ def do_scrap(cidade, categoria):
     msg = 'Sem informacao'
     url_guia = 'https://www.guiamais.com.br/'
     pagina_inicial= 1
-    pagina_final = 5
+    pagina_final = 3
     lista_empresa = []
     lista_endereco = []
     
