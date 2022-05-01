@@ -117,15 +117,18 @@ def main():
         col1, col2, col3 = st.columns(3)
     
         
-        #col1.header("Farmacias e drogarias")
+        col1.header("Farmacias e drogarias")
         col1.image(farmacia, width=200)
+        col1.header("Farmacias e drogarias")
         
-        #col2.header("Pizzarias")
+        col2.header("Pizzarias")
         col2.image(pizzaria, width=200)
+        col2.header("Pizzarias")
 
 
-        #col3.header("Restaurantes")
+        col3.header("Restaurantes")
         col3.image(restaurante, width=200)
+        col3.header("Restaurantes")
         
        
         
