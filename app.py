@@ -125,7 +125,7 @@ def main():
 
 
         col3.header("Restaurantes")
-        col3.image(restaurante, width=300
+        col3.image(restaurante, width=300)
         
        
         
