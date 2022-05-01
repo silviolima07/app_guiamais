@@ -42,19 +42,33 @@ def get_table_download_link(df,file):
     
 
 def do_scrap(cidade, categoria):
+    #https://www.guiamais.com.br/sao-paulo-sp/produtos-farmaceuticos-e-cosmeticos/farmacias-e-drogarias?page=9
+    #https://www.guiamais.com.br/sao-paulo-sp/restaurantes/pizzarias?page=9
+    #https://www.guiamais.com.br/sao-paulo-sp/restaurantes/restaurante?page=50
+    
+    
     msg = 'Sem informacao'
     url_guia = 'https://www.guiamais.com.br/'
-    categoria = categoria
-    subcategoria = categoria
     pagina_inicial= 1
     pagina_final = 10
     lista_empresa = []
     lista_endereco = []
-
+    
+    if categoria == 'farmacia':
+        url_categoria = url_guia+'/'+cidade+'/produtos-farmaceuticos-e-cosmeticos/farmacias-e-drogarias'+'?page='
+    
+    if categoria == 'pizzaria':
+        url_categoria = url_guia+'/'+cidade+'/restaurantes/pizzarias'+'?page='
+    
+    if categoria == 'restaurante':
+        url_categoria = url_guia+'/'+cidade+'/restaurantes/restaurante'+'?page='
+    
+    
+page
 
     for page in range(pagina_inicial, pagina_final):
                 page = str(pagina_inicial)
-                url_page = url_guia+cidade+'/'+categoria+'/'+subcategoria+'?page='+page
+                url_page = url_categoria+page
                 
                 df_guiamais= crawler_guiamais(url_page, page, lista_empresa, lista_endereco)
 
