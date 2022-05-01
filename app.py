@@ -163,7 +163,7 @@ def main():
                 cidade = 'porto-alegre-rs'                
                 
                             
-            df = do_scrap(cidade)
+            df = do_scrap(cidade,categoria)
          
             
     elif choice == activities[2]:
