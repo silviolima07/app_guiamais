@@ -121,7 +121,7 @@ def main():
         col1.image(farmacia, width=200)
         
         #col2.header("Pizzarias")
-        col2.image(pizzaria, width=250)
+        col2.image(pizzaria, width=200)
 
 
         #col3.header("Restaurantes")
