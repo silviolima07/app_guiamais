@@ -14,6 +14,7 @@ def crawler_guiamais(url_page, page, lista_empresa, lista_endereco):
     
     print("\nCrawler_guiamais")
     print("Pagina:", page)
+    st.subheader("Pagina "+str(page))
     print("\nURL:", url_page)
     page = requests.get(url_page, allow_redirects=False)
     soup = BeautifulSoup(page.text, 'html.parser')
@@ -42,6 +43,7 @@ def crawler_guiamais(url_page, page, lista_empresa, lista_endereco):
                 temp =  ' '.join(temp.split()).strip().replace('-','')
                 print('Address:',temp)
                 st.write(temp)
+                st.write("-------------------------------------------------------")
                 lista_endereco.append(temp)
             except:
                 lista_endereco.append(msg)
