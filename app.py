@@ -12,6 +12,8 @@ import base64
 
 import sys
 
+import time
+
 from scrap import crawler_guiamais
 
 
@@ -212,7 +214,14 @@ def main():
             if cidade == 'Palmas':
                cidade = 'palmas-to'                
                             
+            bar = st.progress(0)
+            for i in range(11):
+                bar.progress(i * 10)
+                # wait
+                time.sleep(0.1)
+                
             df = do_scrap(cidade,categoria)
+            
          
             
     elif choice == activities[2]:
