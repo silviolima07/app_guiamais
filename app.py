@@ -110,7 +110,7 @@ def main():
     if choice == activities[0]:
         st.subheader("Objetivos")
         st.markdown("### - descobrir o endereço na cidade:")
-        st.markdown("### - farmacias e drogarias
+        st.markdown("### - farmacias e drogarias")
         st.markdown("### - pizzarias")
         st.markdown("### - restaurantes")
         
