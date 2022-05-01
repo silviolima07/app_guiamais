@@ -47,7 +47,7 @@ def do_scrap(cidade):
     categoria = 'restaurantes'
     subcategoria = 'restaurante'
     pagina_inicial= 1
-    pagina_final = 10
+    pagina_final = 50
     lista_empresa = []
     lista_endereco = []
 
@@ -167,7 +167,7 @@ def main():
         #st.write("Foram definidos 4 cargos apenas para validar o processo.")
         #st.write("O scrap para o cargo de Engenheiro de Machine Learning trouxe poucas linhas.")
         #st.write("Para os demais cargos, foram encontradas mais de 100 vagas, distribuídas em diversas páginas.")
-        st.write("Esse app traz as 5 primeiras páginas apenas.")
+        st.write("Esse app traz as 50 primeiras páginas apenas.")
         #st.subheader("Observacao:")
         #st.write("O codigo html da pagina muda ao longo do tempo e ajustes no scrap são necessarios.")
         #st.subheader("Versão 02")
