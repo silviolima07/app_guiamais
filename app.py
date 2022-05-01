@@ -77,7 +77,7 @@ def do_scrap(cidade, categoria):
     file = 'df_'+cidade+'_'+size+'_'+categoria+'.csv'
     df_guiamais.to_csv(file, index=False)
             
-
+    st.markdown("## Fim do scrap")
     df_guiamais.drop_duplicates(inplace=True)
     st.subheader("Total: "+str(df_guiamais.shape[0])+ ' observações unicas')
     st.table(df_guiamais)
