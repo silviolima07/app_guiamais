@@ -167,17 +167,50 @@ def main():
                 cidade = 'fortaleza-ce'
             if cidade == 'Natal':
                 cidade = 'natal-rn'
-            if cidade == 'Vitoria':
+            if cidade == 'Vitória':
                 cidade = 'vitoria-es'
-            if cidade == 'Cuiaba':
+            if cidade == 'Cuiabá':
                 cidade = 'cuiaba-mt'
             if cidade == 'Curitiba':
                 cidade = 'curitiba-pr'
+            if cidade == 'Porto Alegre':
+                cidade = 'porto-alegre-rs'
             if cidade == 'Salvador':
                 cidade = 'salvador-ba'
-            if cidade == 'Porto Alegre':
-                cidade = 'porto-alegre-rs'                
-                
+            if cidade == 'Rio Branco':
+                cidade = 'rio-branco-ac'    
+            if cidade == 'Maceió':
+                cidade = 'maceio-al'
+            if cidade == 'Macapá':
+                cidade = 'macapa-ro'
+            if cidade == 'Manaus':
+                cidade = 'manaus-am'
+            if cidade == 'Brasilia':
+               cidade = 'brasilia-df'
+            if cidade == 'Goiânia':
+               cidade = 'goiania-go'
+            if cidade == 'São Luís':
+               cidade = 'sao-luis-ma'
+            if cidade == 'Campo Grande':
+               cidade = 'campo-grande-ms'
+            if cidade == 'Belém':
+               cidade = 'belem-pa'
+            if cidade == 'João Pessoa':
+               cidade = 'joao-pessoa-al'
+            if cidade == 'Recife':
+               cidade = 'recife-pe'
+            if cidade == 'Teresina':
+               cidade = 'teresina-pi'
+            if cidade == 'Porto Velho':
+               cidade = 'porto-velho-ro'
+            if cidade == 'Boa Vista':
+               cidade = 'boa-vista-rr'
+            if cidade == 'Florianópolis':
+               cidade = 'florianopolis-sc'
+            if cidade == 'Aracaju':
+               cidade = 'aracaju-se'
+            if cidade == 'Palmas':
+               cidade = 'palmas-to'                
                             
             df = do_scrap(cidade,categoria)
          
