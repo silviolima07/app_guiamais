@@ -105,15 +105,20 @@ def main():
     farmacia = Image.open("Images/farmacia.png")
     pizzaria = Image.open("Images/pizza.png") 
     restaurante = Image.open("Images/restaurantes.png")
+    
+    lista_capitais = ['Rio Branco','Maceió','Macapá','Manaus','Salvador','Fortaleza','Brasília',
+                      'Vitória','Goiânia','São Luís','Cuiabá','Campo Grande'´,'Belo Horizonte',
+                      'Belém','João Pessoa','Curitiba','Recife','Teresina','Rio de Janeiro',
+                      'Natal','Porto Alegre','Porto Velho','Boa Vista','Florianópolis',
+                      'São Paulo','Aracaju','Palmas']
+
 
    
 
     activities = ["Home",'Capitais','Cidades',"About"]
-    file_csv = ['CSV/indeed_Cientista_de_dados.csv','CSV/indeed_Analista_de_dados.csv', 'CSV/indeed_Engenheiro_de_Machine_Learning.csv',
-                'CSV/indeed_Engenheiro_de_Dados.csv']
+    
     choice = st.sidebar.selectbox("Selecione uma opção",activities)
 
-    #header_list = ["Cargo", "Empresa"]
     
     df_cidades = pd.read_csv("df_cidades-uf.csv")
 
@@ -149,11 +154,11 @@ def main():
         categoria = cat.lower()
         cidade = st.selectbox(
      'Escolha uma capital',
-     ('Sao Paulo', 'Rio de Janeiro', 'Belo Horizonte', 'Fortaleza', 'Natal', 'Vitoria', 'Cuiaba', 'Curitiba', 'Salvador', 'Porto Alegre' ))
+     [lista_capitais])
         st.subheader(cidade.upper())
         st.subheader("INICIAR")
         if st.button("  SCRAP  "):
-            if cidade == 'Sao Paulo':
+            if cidade == 'São Paulo':
                 cidade = 'sao-paulo-sp'
             if cidade == 'Rio de Janeiro':
                 cidade = 'rio-de-janeiro-rj'
