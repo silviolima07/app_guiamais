@@ -46,7 +46,7 @@ def check_next_page(url):
     st.subheader("Checando se existe proxima pagina")
     temp_page = requests.get(url, allow_redirects=False)
     temp_soup = BeautifulSoup(temp_page.text, 'html.parser')
-    st.write(temp_soup)
+    st.write(temp_page.text)
     temp_nav = temp.soup.find('nav', class_= 'pagination')
     temp_elem_next = temp_nav.soup.find('a', class_ = 'nextPage')
     temp = str(temp_elem_next)
