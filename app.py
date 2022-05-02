@@ -61,7 +61,16 @@ def check_next_page(url):
     else:
         print("Ultima pagina detectada na checagem")
         return False    
-    
+ 
+
+def do_faixa_progresso():
+    bar = st.progress(0)
+    for i in range(11):
+        bar.progress(i * 10)
+        # wait
+        time.sleep(0.05)
+                
+
 
 def do_scrap(cidade, categoria):
     #https://www.guiamais.com.br/sao-paulo-sp/produtos-farmaceuticos-e-cosmeticos/farmacias-e-drogarias?page=9
@@ -110,7 +119,7 @@ def do_scrap(cidade, categoria):
     size = str(df_guiamais.shape[0])
     file = 'df_'+cidade+'_'+size+'_'+categoria+'.csv'
     df_guiamais.to_csv(file, index=False)
-            
+    do_faixa_progresso()        
     st.markdown("## Fim do scrap")
     df_guiamais.drop_duplicates(inplace=True)
     st.subheader("Total: "+str(df_guiamais.shape[0])+ ' observações unicas')
@@ -248,21 +257,11 @@ def main():
             if cidade == 'Palmas':
                cidade = 'palmas-to'                
                             
-            bar = st.progress(0)
-            for i in range(11):
-                bar.progress(i * 10)
-                # wait
-                time.sleep(0.05)
+            do_faixa_progresso()
                 
             df = do_scrap(cidade,categoria)
             
-            bar = st.progress(0)
-            for i in range(11):
-                bar.progress(i * 10)
-                # wait
-                time.sleep(0.05)
-                
-            st.subheader(cidade.upper())
+            
     elif choice == activities[2]:
         #cidade = st.text_input('Informe uma cidade', help="formato cidade-uf")
         cat = st.radio(
