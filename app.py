@@ -88,6 +88,7 @@ def do_scrap(cidade, categoria):
                 
                 # Check_next_page igual a True se for existir proxima pagina no site
                 # Se retorna False, o not converte em True e o loop encerra.
+                st.subheader("URL: "+url_page)
                 if check_next_page(url_page):
                     n = int(page)
                     n+=1
