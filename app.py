@@ -256,8 +256,13 @@ def main():
                 
             df = do_scrap(cidade,categoria)
             
-         
-            
+            bar = st.progress(0)
+            for i in range(11):
+                bar.progress(i * 10)
+                # wait
+                time.sleep(0.05)
+                
+            st.subheader(cidade.upper())
     elif choice == activities[2]:
         #cidade = st.text_input('Informe uma cidade', help="formato cidade-uf")
         cat = st.radio(
@@ -287,7 +292,8 @@ def main():
         #st.write("Foram definidos 4 cargos apenas para validar o processo.")
         #st.write("O scrap para o cargo de Engenheiro de Machine Learning trouxe poucas linhas.")
         #st.write("Para os demais cargos, foram encontradas mais de 100 vagas, distribuídas em diversas páginas.")
-        st.write("Esse app traz as 10 primeiras páginas apenas.")
+        st.write("Esse app traz as 6 primeiras páginas apenas.")
+        st.write("Algumas cidades/capitais tem menos paginas.")
         #st.subheader("Observacao:")
         #st.write("O codigo html da pagina muda ao longo do tempo e ajustes no scrap são necessarios.")
         #st.subheader("Versão 02")
