@@ -170,10 +170,9 @@ def main():
 
     if choice == activities[0]:
         st.subheader("Objetivos")
-        st.markdown("### - descobrir o endereço")
-        st.markdown("### O endereço pode ser usado para contato e gerar um novo cliente para a empresa")
-        st.markdown("### Outras informações podem ser extraidas, tais como o telefone, o cep, etc...")
-        st.markdown("### Dessa forma geramos dados que se tornam informação útil para estabelecer contato.")
+        st.markdown("### - descobrir endereços que serão usado como contato para novos clientes")
+        st.markdown("## - aumentar o portfolio de clientes")
+        st.markdown("### - gerar informação útil para estabelecer contato.")
         #st.markdown("### - farmacias e drogarias")
         #st.markdown("### - pizzarias")
         #st.markdown("### - restaurantes")
@@ -289,6 +288,8 @@ def main():
         st.subheader("Built with Streamlit")
         
         st.write("Dados coletados via scrap usando: Selenium e BeautifulSoup.")
+        st.write("Extraida nome e endereço.")
+        st.write("Outras informações podem ser extraidas, tais como o telefone, o cep, etc...")
         #st.markdown("A coleta dos dados é feita às 9h, 12h, 15h e 18h")
         #st.write("Executados via crontab scripts realizam o scrap e atualização do app.")
         #st.write("Foram definidos 4 cargos apenas para validar o processo.")
