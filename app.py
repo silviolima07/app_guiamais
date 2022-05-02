@@ -302,7 +302,7 @@ def main():
         #st.write("O codigo html da pagina muda ao longo do tempo e ajustes no scrap são necessarios.")
         #st.subheader("Versão 02")
         #st.write(" - incluído o link encurtado da vaga")
-        st.title("by Silvio Lima")
+        st.subheader("by Silvio Lima")
         
         #if st.button("Linkedin"):
         #    js = "window.open('https://www.linkedin.com/in/silviocesarlima/')"
