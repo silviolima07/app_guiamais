@@ -141,8 +141,8 @@ def main():
     #st.markdown(html_page, unsafe_allow_html=True)
    
     html_page = """
-    <div style="background-color:white;padding=40px">
-        <p style='text-align:center;font-size:40px;font-weight:bold;color:red'>Web scrap de Estabelecimentos Comerciais</p>
+    <div style="background-color:white;padding=36px">
+        <p style='text-align:center;font-size:36px;font-weight:bold;color:red'>Web scrap de Estabelecimentos Comerciais</p>
     </div>
               """
     st.markdown(html_page, unsafe_allow_html=True)
