@@ -16,6 +16,8 @@ import time
 
 from scrap import crawler_guiamais
 
+import requests
+
 
 def download_link(df, texto1, texto2):
     if isinstance(df,pd.DataFrame):
@@ -43,14 +45,14 @@ def get_table_download_link(df,file):
     return href 
 
 def check_next_page(url):
-    st.subheader("Checando se existe proxima pagina")
+    #st.subheader("Checando se existe proxima pagina")
     temp_page = requests.get(url, allow_redirects=False)
     temp_soup = BeautifulSoup(temp_page.text, 'html.parser')
-    st.write(temp_page.text)
+    #st.write(temp_page.text)
     temp_nav = temp.soup.find('nav', class_= 'pagination')
     temp_elem_next = temp_nav.soup.find('a', class_ = 'nextPage')
     temp = str(temp_elem_next)
-    st.subheader("Temp: ", temp)
+    #st.subheader("Temp: ", temp)
     if temp != 'None':
         print("Existe proxima pagina")
         return True   
