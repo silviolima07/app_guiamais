@@ -40,7 +40,21 @@ def get_table_download_link(df,file):
     csv = df.to_csv(index=False)
     b64 = base64.b64encode(csv.encode()).decode()  # some strings <-> bytes conversions necessary here
     href = f'<a href="data:file/csv;base64,{b64}" download= "{file}" >Download csv</a>'
-    return href    
+    return href 
+
+def check_next_page(url):
+    print("Checando se existe proxima pagina")
+    temp_page = requests.get(url_page, allow_redirects=False)
+    temp_soup = BeautifulSoup(temp_page.text, 'html.parser')
+    temp_elem_next = temp_soup.find('a', class_ = 'nextPage')
+    temp = str(temp_elem_next)
+    print("Temp: ", temp)
+    if temp != 'None':
+        print("Existe proxima pagina")
+        return True   
+    else:
+        print("Ultima pagina detectada na checagem")
+        return False    
     
 
 def do_scrap(cidade, categoria):
@@ -71,6 +85,19 @@ def do_scrap(cidade, categoria):
                 url_page = url_categoria+page
                 
                 df_guiamais= crawler_guiamais(url_page, page, lista_empresa, lista_endereco)
+                
+                # Check_next_page igual a True se for existir proxima pagina no site
+                # Se retorna False, o not converte em True e o loop encerra.
+                if check_next_page(url_page):
+                    n = int(page)
+                    n+=1
+                    page = n
+                    print("Proxima pagina: ", page)
+    
+                else: 
+                    break
+                
+                
 
     print("Salvar dataset gerado")
     size = str(df_guiamais.shape[0])
