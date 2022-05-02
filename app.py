@@ -171,6 +171,9 @@ def main():
     if choice == activities[0]:
         st.subheader("Objetivos")
         st.markdown("### - descobrir o endereço")
+        st.markdown("### O endereço pode ser usado para contato e gerar um novo cliente para a empresa")
+        st.markdown("### Outras informações podem ser extraidas, tais como o telefone, o cep, etc...")
+        st.markdown("### Dessa forma geramos dados que se tornam informação útil para estabelecer contato.")
         #st.markdown("### - farmacias e drogarias")
         #st.markdown("### - pizzarias")
         #st.markdown("### - restaurantes")
