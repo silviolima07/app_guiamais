@@ -170,7 +170,7 @@ def main():
 
     if choice == activities[0]:
         st.subheader("Objetivos")
-        st.markdown("#### - descobrir endereços que serão usado como contato")
+        st.markdown("#### - geração de leads")
         st.markdown("#### - aumentar o portfolio de clientes")
         st.markdown("#### - gerar informação útil para estabelecer contato.")
         #st.markdown("### - farmacias e drogarias")
