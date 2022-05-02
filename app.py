@@ -44,7 +44,7 @@ def get_table_download_link(df,file):
 
 def check_next_page(url):
     print("Checando se existe proxima pagina")
-    temp_page = requests.get(url_page, allow_redirects=False)
+    temp_page = requests.get(url, allow_redirects=False)
     temp_soup = BeautifulSoup(temp_page.text, 'html.parser')
     temp_elem_next = temp_soup.find('a', class_ = 'nextPage')
     temp = str(temp_elem_next)
