@@ -18,6 +18,8 @@ from scrap import crawler_guiamais
 
 import requests
 
+from bs4 import BeautifulSoup
+
 
 def download_link(df, texto1, texto2):
     if isinstance(df,pd.DataFrame):
