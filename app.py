@@ -70,7 +70,7 @@ def do_scrap(cidade, categoria):
     
     
     msg = 'Sem informacao'
-    url_guia = 'https://www.guiamais.com.br/'
+    url_guia = 'https://www.guiamais.com.br'
     pagina_inicial= 1
     pagina_final = 6
     lista_empresa = []
@@ -94,7 +94,7 @@ def do_scrap(cidade, categoria):
                 
                 # Check_next_page igual a True se for existir proxima pagina no site
                 # Se retorna False, o not converte em True e o loop encerra.
-                st.subheader("URL: "+url_page)
+                #.subheader("URL: "+url_page)
                 if check_next_page(url_page):
                     n = int(page)
                     n+=1
@@ -188,7 +188,7 @@ def main():
         
         categoria = cat.lower()
         cidade = st.selectbox(
-     'Escolha uma capital',
+     'ESCOLHA UMA CAPITAL:',
      lista_capitais)
         st.subheader(cidade.upper())
         st.subheader("INICIAR")
@@ -266,7 +266,7 @@ def main():
         
         categoria = cat.lower()
         cidade = st.selectbox(
-     'Escolha uma cidade',
+     'ESCOLHA UMA CIDADE',
      df_cidades['cidade-uf'])
 
         #cidade = 'sao-paulo-sp'
