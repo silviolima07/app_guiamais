@@ -177,6 +177,7 @@ def main():
         #st.markdown("### - pizzarias")
         #st.markdown("### - restaurantes")
         
+        st.write(" ")
         col1, col2, col3 = st.columns(3)
     
         col1.image(farmacia, width=200)
