@@ -288,21 +288,21 @@ def main():
         #st.sidebar.image(about,caption="", width=300, height= 200)
         st.subheader("Built with Streamlit")
         
-        st.markdown("### Dados coletados via scrap usando: Selenium e BeautifulSoup.")
-        st.markdown("### Extraida nome e endereço.")
+        st.markdown("### Dados coletados via scrap usando: Selenium e BeautifulSoup")
+        st.markdown("### Extraido nome e endereço")
         st.markdown("### Outras informações podem ser extraidas, tais como o telefone, o cep, etc...")
         #st.markdown("A coleta dos dados é feita às 9h, 12h, 15h e 18h")
         #st.write("Executados via crontab scripts realizam o scrap e atualização do app.")
         #st.write("Foram definidos 4 cargos apenas para validar o processo.")
         #st.write("O scrap para o cargo de Engenheiro de Machine Learning trouxe poucas linhas.")
         #st.write("Para os demais cargos, foram encontradas mais de 100 vagas, distribuídas em diversas páginas.")
-        st.markdown("### Esse app traz as 5 primeiras páginas apenas.")
-        st.markdown("### Algumas cidades/capitais tem menos paginas.")
+        st.markdown("### Esse app traz as 5 primeiras páginas apenas")
+        st.markdown("### Algumas cidades/capitais tem menos paginas")
         #st.subheader("Observacao:")
         #st.write("O codigo html da pagina muda ao longo do tempo e ajustes no scrap são necessarios.")
         #st.subheader("Versão 02")
         #st.write(" - incluído o link encurtado da vaga")
-        st.subheader("by Silvio Lima")
+        st.title("by Silvio Lima")
         
         #if st.button("Linkedin"):
         #    js = "window.open('https://www.linkedin.com/in/silviocesarlima/')"
