@@ -172,7 +172,7 @@ def main():
         st.subheader("Objetivos")
         st.markdown("#### - geração de leads")
         st.markdown("#### - aumentar o portfolio de clientes")
-        st.markdown("#### - gerar informação útil para estabelecer contato.")
+        st.markdown("#### - gerar informação útil para estabelecer contato")
         #st.markdown("### - farmacias e drogarias")
         #st.markdown("### - pizzarias")
         #st.markdown("### - restaurantes")
